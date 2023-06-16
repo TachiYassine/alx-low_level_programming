@@ -3,12 +3,11 @@
 #include <stdio.h> 
 
 /**
- * Main - Entry point
+ * Main - The output of the program should be positive or negative
+ * according to random numbem that stored in variable n
  *
- * Description: The output of the program should be positive or negative according to number n
- *
- * Return : 0 (success)
- */
+ * Return always zero
+*/
 
 int main(void)
 {
