@@ -3,10 +3,13 @@
 #include <stdio.h> 
 
 /**
- * Main - The output of the program should be positive or negative
- * according to random numbem that stored in variable n
+ * main - The output of the program should be:
+ * The number, followed by
+ * if the number is greater than 0: is positive
+ * if the number is 0: is zero
+ * if the number is less than 0: is negative
  *
- * Return always zero
+ * return always 0.
 */
 
 int main(void)
@@ -23,9 +26,7 @@ int main(void)
 	{
 	printf("%i is zero\n", n);
 	}
-	else if (n < 0)
-	{
+	else
 	printf("%i is negative\n", n);
-	}
 	return (0);
 }
