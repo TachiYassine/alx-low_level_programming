@@ -1,15 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h> 
+#include <stdio.h>
 
 /**
- * main - The output of the program should be:
- * The number, followed by
- * if the number is greater than 0: is positive
- * if the number is 0: is zero
- * if the number is less than 0: is negative
+ * main - Prints a random number and states whether it is positive, negative, or zero.
  *
- * return always 0.
+ * Return: Always 0.
 */
 
 int main(void)
