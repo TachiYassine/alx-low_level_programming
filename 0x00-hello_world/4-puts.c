@@ -1,9 +1,8 @@
 #include <stdio.h>
 /**
- * Write a C program that prints exactly argument
- * Use the function puts
- * You are not allowed to use printf
- * Your program should end with the value is zero.
+ * main - Entry point
+ * write a C program with function puts
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
