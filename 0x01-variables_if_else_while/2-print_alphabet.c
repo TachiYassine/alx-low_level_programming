@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- * Main - prints the alphabets in one line.
+ * main - Prints the alphabet in lowercase.
  *
- * Return: always 0.
+ * Return: Always 0.
  */
-
 int main(void)
 {
 	char letter = 'a';
