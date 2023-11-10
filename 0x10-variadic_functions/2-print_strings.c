@@ -7,13 +7,13 @@
  * Return: Always 0
  */
 
-void print_strings(const *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	char *str;
 	unsigned int i;
 	va_list ap;
 
-	va_start(ap, n)
+	va_start(ap, n);
 	if (separator == NULL)
 		separator = "";
 
