@@ -21,7 +21,7 @@ int _strlen(const char *s)
 }
 
 /**
-* add_node - add a new node at beginning of a list_t list.
+* add_node - add a new node at beginning of a list_t list
 * @head: head of a list_t list.
 * @str: value to insert into element.
 * Return: the number of nodes.
