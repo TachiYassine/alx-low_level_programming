@@ -1,4 +1,4 @@
-# README: Understanding Make, Makefiles, Rules, and Variables
+# Understanding Make, Makefiles, Rules, and Variables
 
 ## General
 
