@@ -40,10 +40,12 @@ A basic rule in a Makefile looks like this:
 ```makefile
 target: prerequisites
     recipe
+```
 
 #### Exemple:
 
-`all: program
+```makefile
+all: program
 
 program: main.o utils.o
     gcc -o program main.o utils.o
@@ -56,6 +58,7 @@ utils.o: utils.c
 
 clean:
     rm -f *.o program`
+```
 
 ### Explicit and Implicit Rules
 #### Explicit Rules
@@ -63,15 +66,22 @@ Explicit rules specify how to build specific targets. These rules explicitly def
 
 #### Exemple:
 
+```makefile
 main.o: main.c
     gcc -c main.c
-Implicit Rules
-Implicit rules define a generic method for building targets without explicitly listing all of them. For example, make has built-in implicit rules for compiling .c files to .o files:
+```
+
+### Implicit Rules
+#### Implicit rules define a generic method for building targets without explicitly listing all of them. For example, make has built-in implicit rules for compiling .c files to .o files:
 
 #### Exemple:
+
+```makefile
 %.o: %.c
     gcc -c $< -o $@
-In this case, % acts as a wildcard, and $< represents the prerequisite (source file), while $@ represents the target (object file).
+```
+
+- In this case, % acts as a wildcard, and $< represents the prerequisite (source file), while $@ represents the target (object file).
 
 ### Common / Useful Rules
 #### All
@@ -79,23 +89,30 @@ The all rule is a common convention in Makefiles, used to define the default goa
 
 #### Exemple:
 
+```makefile
 all: program
+```
 
 #### Clean
 The clean rule is used to remove files that were generated during the build process. It's not automatically run by make; you need to call it explicitly.
 
 #### Exemple:
+
+```makefile
 clean:
     rm -f *.o program
+```
 
 ### Phony Targets
 ####Phony targets are not actual files; they are just names for a recipe to be executed when explicitly requested. The clean target is often a phony target.
 
 #### Exemple:
 
+```makefile
 .PHONY: clean
 clean:
     rm -f *.o program
+```
 
 ### Variables
 #### What Are Variables?
@@ -106,6 +123,7 @@ Variables are set using the = operator. They are referenced using the $ symbol w
 
 #### Exemple:
 
+```makefile
 CC = gcc
 CFLAGS = -Wall -g
 OBJ = main.o utils.o
@@ -118,9 +136,10 @@ program: $(OBJ)
 
 clean:
     rm -f *.o program
+```
 
 #### In this example:
 
-CC is the compiler.
-CFLAGS contains the compiler flags.
-OBJ lists the object files.
+`CC` is the compiler.
+`CFLAGS` contains the compiler flags.
+`OBJ` lists the object files.
